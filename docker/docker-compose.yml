@@ -1,0 +1,11 @@
+version: '3'
+services:
+    home_service:
+      image: green/python:latest
+      build:
+        context: ..
+        dockerfile: docker/Dockerfile
+      container_name: "green_home_service"
+      volumes: 
+        - ../:/GREEN
+      command: /bin/sh -c "while sleep 1000; do :; done"
