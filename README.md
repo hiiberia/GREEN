@@ -1,9 +1,13 @@
 <div align="center">
-  <a href="https://green.hi-iberia.es/">
-    <img src="https://green.hi-iberia.es/wp-content/uploads/2022/11/cropped-favicon.png" width="150" height="150">
-  </a> 
 <h1> GREEN </h1>
+  <a href="https://green.hi-iberia.es/">
+    <img src="https://green.hi-iberia.es/wp-content/uploads/2023/03/green-github-e1680181398897.png">
+  </a> 
+  
+<h3> inteliGencia colaboRativa para ciudadEs sostENibles </h3>
 </div>
+
+## ¿Qué es  [GREEN](https://green.hi-iberia.es)?
 
 [![Website](https://img.shields.io/website?label=Green%20Web&logo=wordpress&up_message=online&url=https%3A%2F%2Fgreen.hi-iberia.es%2F)](https://green.hi-iberia.es)
 [![Youtube](https://img.shields.io/youtube/channel/views/UCVIFpO7f6Sgedn85Z8YD_xA?label=Playlist&style=social)](https://youtube.com/playlist?list=PLZTVw7aFUwDrXejautXrym9g4RuMne1TP)
