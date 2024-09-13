@@ -1,0 +1,46 @@
+Descripción de la Simulación
+============================
+
+Esta simulación utiliza el escenario de "chargingstations" proporcionado por defecto en los tests de SUMO, ubicado en la ruta `sumo/tests/sumo/devices/battery/chargingstations`. Este escenario simula el comportamiento de estaciones de recarga de vehículos eléctricos en una red de tráfico, modelando cómo los vehículos se detienen y cargan sus baterías en diferentes estaciones.
+
+Modificaciones Realizadas
+-------------------------
+
+Para enriquecer este escenario, hemos añadido un script en Python basado en el tutorial de SUMO de 40 minutos de "ethanpng2021". Este script permite extraer información detallada de cada una de las estaciones de recarga durante la simulación y exportarla a un archivo Excel para facilitar su análisis. La información recopilada incluye, entre otros datos:
+
+- Datos de las estaciones de recarga: Número de recargas realizadas, tiempos de espera, capacidad de carga utilizada, y eficiencia de cada estación.
+- Datos de los vehículos: Estado de la batería de los vehículos eléctricos, tiempos de carga y descarga, y patrones de uso de las estaciones de recarga.
+
+Objetivo de la Simulación
+-------------------------
+
+El objetivo de esta simulación es analizar el comportamiento de las estaciones de recarga y los vehículos eléctricos en un entorno de tráfico simulado. A través del análisis de los datos extraídos, podemos:
+
+- Optimizar la ubicación y configuración de las estaciones de recarga: Identificar las estaciones más utilizadas y su rendimiento en distintos escenarios de tráfico.
+- Evaluar la eficiencia del proceso de carga: Analizar la eficiencia energética y tiempos de espera en diferentes condiciones.
+- Mejorar la planificación urbana: Proporcionar datos útiles para la planificación de infraestructuras de recarga en ciudades inteligentes.
+
+Componentes de la Simulación
+----------------------------
+
+1. Escenario de Chargingstations de SUMO: Escenario base que simula un conjunto de estaciones de recarga en una red de tráfico urbana.
+2. Script de Python (`sumo_run.py`): Herramienta personalizada para extraer datos de la simulación y exportarlos a Excel.
+3. Archivos de Configuración de SUMO:
+   - `input_routes.rou.xml`: Define las rutas y comportamientos de los vehículos eléctricos.
+   - `input_additional.add.xml`: Configura las estaciones de recarga adicionales.
+   - `net.net.xml`: Configura la red de tráfico, incluyendo intersecciones, carriles, y conexiones.
+
+Cómo Ejecutar la Simulación
+---------------------------
+
+1. Ejecutar la simulación de SUMO: Utiliza el archivo de configuración `sumo.sumocfg` para iniciar la simulación en SUMO.
+2. Ejecutar el script de Python: Ejecuta `sumo_run.py` para extraer los datos de la simulación y exportarlos a archivos Excel.
+
+Resultados Esperados
+---------------------
+
+Al finalizar la simulación y la ejecución del script de Python, se generarán dos archivos Excel:
+- `output_stations.xlsx`: Contiene los datos recopilados de cada estación de recarga.
+- `output_vehicles.xlsx`: Contiene los datos recopilados de los vehículos eléctricos.
+
+Estos archivos pueden ser utilizados para un análisis detallado del rendimiento de las estaciones de recarga y el comportamiento de los vehículos eléctricos en el escenario simulado.
