@@ -21,126 +21,95 @@ Síguenos en nuestro [canal de YouTube de HI Iberia](https://www.youtube.com/@hi
 
 Visita regularmente [nuestra página Web](https://green.hi-iberia.es), publicamos artículos diariamente.
 
-## Estructura del repositorio:
-- [`airflow`](airflow/): Archivos relacionados con Airflow para todo el proyecto
-- [`data`](data/): Datos del proyecto. No sincronizado con la base de datos central, únicamente pequeños grupos de datos necesarios.
-- [`docker`](docker/): Archivos relacionados con Docker para todo el proyecto. Podría hacer uso de los archivos Docker para cada uno de los componentes de la ML pipeline.
-- [`docs`](docs/): Cualquier documentación de apoyo, como diccionarios de datos, manuales, documentación de los paquetes (autogenerada a partir de docstrings) y cualquier otro material explicativo.
-- [`green_blockchain`](green/bc/): Bibliotecas/módulos Python listos y reutilizables para el módulo de Blockchain. 
-- [`green_contract`](green/sc/): Bibliotecas/módulos Python listos y reutilizables para el módulo de Smart Contracts. 
-- [`green_federated`](green/fl/): Bibliotecas/módulos Python listos y reutilizables para el módulo Federated Learning. Este es el tipo de código python que importas.
-- [`green_simulator`](green/sim/): Bibliotecas/módulos Python listos y reutilizables para el módulo de Simulación. 
-- [`kubernetes`](kubernetes/): Archivos relacionados con Kubernetes. Los archivos Yaml se almacenarían aquí.
-- [`scripts`](scripts/): Donde se colocan los scripts, tanto Python como bash.
-- [`reports`](reports/): Análisis generados como HTML, PDF, LaTeX, etc.
-- [`research`](research/): Scripts y cuadernos .ipynb de experimentación.
-- [`test`](test/): Pruebas para tu código y evalución del proyecto
-- [setup.py](setup.py): Fichero de instalación de las funciones desarrolladas dentro de [green](green_python/) como un nuevo paquete.
-- [requirements.txt](requirements.txt): El archivo de requisitos para reproducir el entorno de análisis
+## Estructura del Repositorio
+
+- **[`conference/`](conference/):** Documentación y archivos relacionados con la asistencia a conferencias y papers presentados en el contexto del proyecto GREEN.
+- **[`data/`](data/):** Incluye conjuntos de datos utilizados en el proyecto. Estos datos no están sincronizados con la base de datos central, sino que son grupos pequeños de datos necesarios para análisis específicos o experimentos locales.
+- **[`docker/`](docker/):** Archivos y configuraciones relacionadas con Docker para todo el proyecto. Contiene Dockerfiles y archivos `docker-compose.yml` que permiten construir y desplegar los componentes del proyecto, incluyendo la pipeline de Machine Learning.
+- **[`events/`](events/):** Cronología de eventos específicos durante el desarrollo del proyecto, incluyendo hitos importantes y actividades clave.
+- **[`green/bc/`](green/bc/):** Módulos y bibliotecas de Python listos para ser reutilizados en el módulo de Blockchain del proyecto GREEN.
+- **[`green/fl/`](green/fl/):** Módulos y bibliotecas de Python para el módulo de Aprendizaje Federado (Federated Learning). Este directorio contiene el código reutilizable para implementar modelos de aprendizaje distribuido.
+- **[`green/sc/`](green/sc/):** Módulos y bibliotecas de Python desarrollados para el manejo de Smart Contracts en el contexto del proyecto.
+- **[`green/sim/`](green/sim/):** Módulos y bibliotecas de Python diseñados para el módulo de Simulación del proyecto, facilitando la simulación de escenarios de recarga y tráfico.
+- **[`kubernetes/`](kubernetes/):** Contiene archivos YAML y otros recursos necesarios para la gestión y despliegue de los componentes del proyecto en un entorno de Kubernetes.
+- **[`multimedia/`](multimedia/):** Contiene contenido multimedia generado, como videos, posters, y folletos, utilizado para la difusión del proyecto.
+- **[`news/`](news/):** Carpeta para almacenar noticias encontradas, analizadas y eventos relacionados con el desarrollo del proyecto.
+- **[`reports/`](reports/):** Resultados de análisis generados en diversos formatos como HTML, PDF, LaTeX, etc., documentando hallazgos y conclusiones del proyecto.
+- **[`research/`](research/):** Scripts y cuadernos Jupyter (`.ipynb`) utilizados para la experimentación, prototipos y análisis exploratorios.
+- **[`requirements.txt`](requirements.txt):** Archivo que especifica todas las dependencias necesarias para reproducir el entorno de desarrollo y análisis del proyecto.
 
 
 ## Instalación
-### Git
-Para el desarrollo de código se requiere instalar git en la máquina en la que se realice desarrollo de código.
-...
-### Docker 
-1. Instalar la versión adecuada de docker desde la página web de [docker](https://www.docker.com/get-started). La versión Docker Desktop es la adecuada si se desea instalar sobre un ordenador personal.
-2. Generar carpetas necesarias para el almacenamiento de los archivos:
+
+Este repositorio no es un repositorio ejecutable, sino que incluye experimentos, archivos comentados, y documentación detallada para facilitar el entendimiento de la combinación de tecnologías utilizadas en el proyecto GREEN. Además de código, sirve como repositorio central de todo el material disponible del proyecto, como reportes, noticias, avances, y contenido multimedia.
+
+Para instalar y configurar el entorno de desarrollo del proyecto GREEN, sigue los pasos a continuación:
+
+1. **Clona el repositorio**:
+
+   Primero, clona el repositorio a tu máquina local y navega al directorio del proyecto:
+
+   ```bash
+   git clone https://github.com/tu_usuario/tu_repositorio.git
+   cd tu_repositorio
    ```
-   mkdir GREEN
-   cd GREEN
-   mkdir postgres-data
+
+2. **Instala las dependencias de Python**:
+   
+   Utiliza el archivo requirements.txt para instalar todas las dependencias necesarias para el proyecto:
+
+   ```bash
+   pip install -r requirements.txt
+   cd tu_repositorio
    ```
-3. Clonar repositorio de GIT.
+
+3. **Configura Docker y Docker Compose**:
+   
+   Asegúrate de tener Docker y Docker Compose instalados en tu sistema. Luego, construye y ejecuta los contenedores necesarios utilizando el siguiente comando:
+
+   ```bash
+   docker-compose -f docker/docker-compose.yml up --build
    ```
-   git clone https://extranet.hi-iberia.es:8444/8ai/green/green.git
-   ```
-4. Desplegar contenedores:
-   ```
-   cd green/docker
-   docker-compose up -d
-   ```
-5. Acceder al contenedor principal
-   ```
-   docker exec -it green_home_service bash
-   ```
-6. Una vez dentro, ejecutar el siguiente comando para instalar el paquete de mapre
-   ```
-   pip install -e .
-   ```
-7. Ahora podemos ejecutar los diferentes scripts.
+
+Este repositorio proporciona una infraestructura completa para experimentar y aprender sobre las tecnologías implementadas en el proyecto GREEN, integrando múltiples fuentes de información y facilitando su accesibilidad y comprensión de manera externa.
 
 
-### Conda
-1. Instalar el servicio de gestión de paquetes de conda (anaconda, miniconda, etc)
-2. Crear el entorno de conda utilizando el fichero yml.
-    ```
-    conda env create -f environment.yml
-    ```
-3. Una vez instalado el entorno y activandolo con `conda activate green`, desde la raiz del proyecto ejecutar el siguiente comando:
-    ```
-    pip install -e .
-    ```
-    Esto permitirá generar un nuevo paquete [green] que contenga las diferentes funciones escritas dentro de la carpeta [green](green_python/).
+## Mapa del Repositorio
 
-4. Ejecutar los diferentes scripts o notebooks de forma sencilla.
+El repositorio del proyecto GREEN está organizado en diferentes carpetas y archivos que agrupan todos los recursos necesarios para desarrollar, ejecutar, y analizar las distintas funcionalidades del proyecto. Esta estructura permite un acceso fácil y ordenado a cada componente, facilitando tanto la comprensión de las tecnologías involucradas como la colaboración entre los miembros del equipo.
 
-
-
+A continuación se presenta una descripción de la estructura del repositorio:
 ```
-.
-├── data
-│   ├── external       <- Datos de terceras fuentes.
-│   ├── interim        <- Datos intermedios que se han transformado.
-│   ├── processed      <- Los conjuntos de datos canónicos definitivos para la modelización.
-│   └── raw            <- El volcado de datos original e inmutable.
+GREEN/
 │
-├── docker
+├── README.md                 # Descripción general del proyecto
+├── LICENSE                   # Licencia del proyecto
 │
-├── docs               <- Diccionarios de datos, manuales y cualquier otro material explicativo.
+├── data/                     # Datos del proyecto, no sincronizados con la base de datos central
 │
-├── kubernetes
+├── docker/                   # Archivos Docker para la configuración de contenedores
+│   ├── Dockerfile
 │
+├── kubernetes/               # Archivos YAML relacionados con Kubernetes
+│   ├── deployment.yaml
 │
-├── README.md          <- El README de nivel superior para los desarrolladores que utilicen este proyecto.
+├── news/                     # Noticias encontradas y analizadas sobre el tema
 │
-├── reports            <- Análisis generados como HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generación de gráficos y cifras para su uso en informes
+├── events/                   # Cronología de eventos durante el desarrollo del proyecto
 │
-├── requirements.txt   <- El archivo de requisitos para reproducir el entorno de análisis
+├── multimedia/               # Contenido multimedia como videos, posters, folletos, etc.
+│   ├── videos/
+│   └── promotional/
 │
-├── research           <- Scripts y cuadernos (.ipynb) de experimentación.
-│   ├── deliver
-│   ├── develop
-│   └── templates
+├── conference/               # Asistencia a conferencias y papers relacionados
 │
-├── scripts            <- Scripts, tanto Python como bash.
+├── green/                    # Bibliotecas y módulos Python reutilizables
+│   ├── blockchain (bc)/
+│   ├── federated (fl)/
+│   ├── contract (sc)/
+│   └── simulator (sim)/
 │
-├── setup.py           <- Hace que el proyecto pip instalable (pip install -e .) por lo que green puede ser importado
+├── reports/                  # Análisis generados como HTML, PDF, LaTeX, etc.
 │
-└── green
-    │
-    ├── simulator
-    │   ├── data           <- Scripts para descargar o generar datos
-    │   ├── models         <- Scripts para entrenar modelos y luego utilizar modelos entrenados para hacer predicciones
-    │   ├── __pycache__
-    │   └── visualization  <- Scripts para crear visualizaciones exploratorias y orientadas a resultados
-    │
-    ├── blockchain
-    │   ├── data           <- Scripts para descargar o generar datos
-    │   ├── models         <- Scripts para entrenar modelos y luego utilizar modelos entrenados para hacer predicciones
-    │   └── visualization  <- Scripts para crear visualizaciones exploratorias y orientadas a resultados
-    │
-    ├── contract
-    │   ├── data           <- Scripts para descargar o generar datos
-    │   ├── models         <- Scripts para entrenar modelos y luego utilizar modelos entrenados para hacer predicciones
-    │   └── visualization  <- Scripts para crear visualizaciones exploratorias y orientadas a resultados
-    │
-    └── federated
-        ├── data           <- Scripts para descargar o generar datos
-        ├── __init__.py    <- Convierte green en un módulo de Python
-        ├── models         <- Scripts para entrenar modelos y luego utilizar modelos entrenados para hacer predicciones
-        ├── __pycache__
-        └── visualization  <- Scripts para crear visualizaciones exploratorias y orientadas a resultados
-
+└── research/                 # Scripts y cuadernos .ipynb de experimentación
 ```
