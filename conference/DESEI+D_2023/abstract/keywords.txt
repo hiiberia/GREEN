@@ -1,0 +1,15 @@
+# Keywords for the DESEI+D 2023 Conference
+# These keywords are used to describe the main themes and technologies discussed in the paper.
+
+Technologies:
+- Inteligencia Artificial
+- Aprendizaje Federado
+- Blockchain
+- Contratos Inteligentes
+- Internet of Things
+
+Applications:
+- Gestión Logística
+- Seguridad y Defensa
+- Trazabilidad
+- Automatización Inteligente

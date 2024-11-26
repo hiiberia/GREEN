@@ -1,0 +1,15 @@
+# Keywords for FL@FM-NeurIPS'24
+# These keywords represent the main technologies and applications discussed in the paper.
+
+## Technologies:
+- Foundation Models
+- Federated Learning
+- Blockchain
+- Contratos Inteligentes
+- Differential Privacy
+
+## Applications:
+- Ciudades Inteligentes
+- Sostenibilidad
+- Predicción de Demanda
+- Optimización Logística

@@ -1,0 +1,16 @@
+# Keywords for DESEI+D 2024 Conference
+# These keywords describe the main technologies and contributions presented in the paper.
+
+## Technologies:
+- Adaptive Federated Learning
+- Blockchain
+- Smart Contracts
+- Physics-Informed Neural Networks (PINNs)
+- Internet of Things (IoT)
+
+## Applications:
+- Gestión Logística
+- Seguridad y Defensa
+- Automatización Operativa
+- Modelado Físico-Digital
+- Trazabilidad de Recursos
