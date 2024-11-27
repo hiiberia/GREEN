@@ -1,10 +1,17 @@
 <div align="center">
 <h1> GREEN </h1>
   <a href="https://green.hi-iberia.es/">
-    <img src="https://green.hi-iberia.es/wp-content/uploads/2023/03/green-github-e1680181398897.png">
+    <img src="https://green.hi-iberia.es/wp-content/uploads/2024/07/GREEN-logo-HI-Iberia-iluminado-2.png" alt="GREEN Logo" width="100">
   </a> 
   
-<h3> inteliGencia colaboRativa para ciudadEs sostENibles </h3>
+<h3>
+  <i>
+    Inteli<span style="font-weight: bold; color: green;">G</span>encia colabo
+    <span style="font-weight: bold; color: green;">R</span>ativa para ciudad
+    <span style="font-weight: bold; color: green;">E</span>s sost
+    <span style="font-weight: bold; color: green;">EN</span>ibles
+  </i>
+</h3>
 </div>
 
 ## ¿Qué es  [GREEN](https://green.hi-iberia.es)?
