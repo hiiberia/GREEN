@@ -1,0 +1,12 @@
+# Ignorar archivos generados por el sistema operativo
+.DS_Store                # macOS: Metadatos de Finder
+Thumbs.db                # Windows: Miniaturas generadas automáticamente
+desktop.ini              # Windows: Configuración de escritorio
+
+# Ignorar archivos generados por entornos de desarrollo
+.idea/                   # IntelliJ IDEA
+.vscode/                 # Visual Studio Code
+*.suo                    # Visual Studio: Opciones de usuario
+*.user                   # Visual Studio: Configuración del usuario
+*.tmp                    # Archivos temporales
+
